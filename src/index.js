@@ -1,16 +1,15 @@
 // import { Project } from "./modules/project";
-import { makeNewProject, addProjectButton, projectInputButton, thisWeek, getAll, deleteAll } from "./modules/functions";
+import { makeNewProject, addProjectButton, projectInputButton, getAll } from "./modules/functions";
 import { titleInput, renderProject, activateProjectInput } from "./modules/dom_logic";
 import { Todo, Project } from "./modules/todo";
 
 // Buttons
 const thisWeekButton = document.getElementById('thisWeek');
-const clearProjectButton = document.getElementById('clearProjects');
 const deleteStorageButton = document.getElementById('deleteProjects');
 const localSButton = document.getElementById('localStorage');
 
 
-// Initialise Projects
+// Build examples
 localSButton.addEventListener('click', () => {
     if (localStorage.length === 0) {
         alert('Examples are set...');
@@ -41,7 +40,6 @@ localSButton.addEventListener('click', () => {
         
         array_2.push(todo_3, todo_4);
         project_2.arrayOfTodos.push(array_2);
-        // project_2 
 
         localStorage.setItem(title_2, JSON.stringify(project_2));
         renderProject(title_2);
@@ -76,7 +74,6 @@ deleteStorageButton.addEventListener('click', () => {
 
 
 addProjectButton.addEventListener('click', activateProjectInput);
-// projectInputButton.addEventListener('click', makeObject);
 projectInputButton.addEventListener('click', makeNewProject);
 projectInputButton.addEventListener('click', () => {
     renderProject(titleInput.value);
