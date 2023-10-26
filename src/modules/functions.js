@@ -1,16 +1,13 @@
 import { Todo, Project } from "./todo";
-import { isToday, isThisWeek, isThisMonth, parseISO, compareDesc, compareAsc } from "date-fns";
-import { renderProject } from "./dom_logic";
-import { forEach } from "neo-async";
+import { isThisWeek, parseISO, compareDesc, compareAsc } from "date-fns";
+
 
 
 // Buttons
-const todayButton = document.getElementById('today_button');
 const thisWeekButton = document.getElementById('thisWeek_button');
 const addProjectButton = document.getElementById('add_project_button');
 const projectInputButton = document.getElementById('add_project_input');
 const cancelProjectInputButton = document.getElementById('cancel_project_input');
-const paragraph = document.getElementById('date_text');
 
 const makeNewProject = () => {
     const projecTitleValue = titleInput.value;
@@ -95,7 +92,6 @@ const deleteTodo = (title, description) => {
         localStorage.setItem(title, JSON.stringify(newProject));
         console.log("Storage wird mit delete_button aktualisiert." + newProject);
     }
-    //const newArrayOfTodos = project.arrayOfTodos[0].filter(description => description !== )
 
 }
 

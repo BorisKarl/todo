@@ -4,7 +4,6 @@ import { Todo, Project } from "./todo";
 
 const content = document.getElementById('project_container_content');
 
-// !!! date Variable beim Project hinzufügen und done im todo setzen (false)s
 
 // Icons
 const trashIconSVG = '<i class="material-icons">delete</i>';
@@ -240,7 +239,6 @@ const renderTodos = (title) => {
                     console.log("Das kommt aus dem EventListener" + project.arrayOfTodos[i][0].description);
                     deleteTodo(title, project.arrayOfTodos[i][0].description);
                     makeTodo(title, project.arrayOfTodos[i][0].date, project.arrayOfTodos[i][0].description, project.arrayOfTodos[i][0].priority, true);
-                    //const delete_div = document.getElementById(project.title + i);
                     console.log("done checkBox" + project.arrayOfTodos[i][0].description);
                     const delete_div = document.getElementById(title + i);
                     
@@ -253,10 +251,6 @@ const renderTodos = (title) => {
                     project.arrayOfTodos[i][0].done = false;
                     todoDescription.classList.remove('line-through');
                     todoDescription.classList.remove('line-through');
-                    // todoDate.style.classList.remove('line-through');
-                    //makeTodo(title, project.arrayOfTodos[i][0].date, project.arrayOfTodos[i][0].description, project.arrayOfTodos[i][0].priority, false);
-                    //const delete_div = document.getElementById(project.title + i);
-                    //todo_content.removeChild(delete_div);
                 }
                 });
 
@@ -276,9 +270,7 @@ const renderTodos = (title) => {
             todoDiv.appendChild(checkBoxDiv);
             todoDiv.appendChild(delete_button);
             todo_content.appendChild(todoDiv);
-            // console.log("Aus dem loop date " + i + " " + project.arrayOfTodos[i].date);
-            // console.log("Aus dem loop mit title " + i + " " + project.arrayOfTodos[i].title);
-            // console.log("Aus dem loop mit prio " + i + " " + project.arrayOfTodos[i].priority);
+       
         }
     }
     
@@ -427,116 +419,4 @@ const editStorage = (todo_object, i) => {
 }
 
 
-
-
-
-
-
-
-
-
-
 export { activateProjectInput, titleInput, renderProject, timeOut };
-
-
-/**
- * 
-
-
-
-
-const displayProject = (object) => {
-    const text_input = document.getElementById('input_details');
-    object.description = text_input.value;
-    localStorage.setItem(object.title, JSON.stringify(object));
-    const div = document.createElement('div');
-    div.setAttribute('id', object.title);
-    const pDate = document.createElement('p');
-    const header = document.createElement('h3');
-    const details = document.createElement('p');
-    const delete_button = document.createElement('button');
-    const edit_button = document.createElement('button');
-    pDate.innerHTML = object.due_date;
-    header.innerHTML = object.title;
-    details.innerHTML = object.description;
-    delete_button.textContent = "Lösche das Projekt";
-    edit_button.textContent = "Verändere etwas";
-    div.appendChild(header);
-    div.appendChild(pDate);
-    div.appendChild(details);
-    div.appendChild(delete_button);
-    div.appendChild(edit_button);
-    content.appendChild(div);
-    edit_button.addEventListener('click', () => {
-        content.removeChild(div);
-        editProject(object)
-        
-    });
-    delete_button.addEventListener('click', () => {
-        localStorage.removeItem(object.title);
-        content.removeChild(div);
-    } );
-};
-
-
-
-
-
-
-
-
-
-
-
-
-const displayProjects = (object) => {
-    const div = document.createElement('div');
-    div.setAttribute('id', object.title);
-    const pDate = document.createElement('p');
-    const header = document.createElement('h3');
-    const details = document.createElement('p');
-    // const delete_button = document.createElement('button');
-    const delete_button = document.createElement('div');
-    // const edit_button = document.createElement('button');
-    const edit_button = document.createElement('div');
-    const button_div = document.createElement('div'); 
-    const close = document.createElement('div');
-    close.innerHTML = closeSVG;
-    button_div.classList.add('button_div');
-    pDate.innerHTML = object.due_date;
-    header.textContent = object.title;
-    details.textContent = "Details: " +  object.description;
-    delete_button.innerHTML = trashIconSVG;
-    edit_button.innerHTML = editIconSVG;
-    div.appendChild(close);
-    div.appendChild(header);
-    div.appendChild(pDate);
-    div.appendChild(details);
-    button_div.appendChild(edit_button);
-    button_div.appendChild(delete_button);
-    div.appendChild(button_div);
-    content.appendChild(div);
-    edit_button.addEventListener('click', () => {
-        div.removeChild(header);
-        div.removeChild(details);
-        div.removeChild(button_div);
-        editProject(object);
-
-    });
-    delete_button.addEventListener('click', () => {
-        localStorage.removeItem(object.title);
-        content.removeChild(div);
-    });
-    close.addEventListener('click', () => {
-        setTimeout(() => {
-            content.removeChild(div);
-        }, 300);
-
-    });
-    
-};
-
- * 
- * 
- * 
- */
