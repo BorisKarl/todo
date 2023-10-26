@@ -84,13 +84,6 @@ projectInputButton.addEventListener('click', () => {
 projectInputButton.addEventListener('click', activateProjectInput);
 
 
-clearProjectButton.addEventListener('click', () => {
-    let array = getAll();
-    array.forEach(element => {
-        removeProjects(element);
-    })
-});
-
 document.addEventListener('DOMContentLoaded', () => {
     let array = getAll();
     array.forEach(e => {
