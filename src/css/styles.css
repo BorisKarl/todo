@@ -178,4 +178,27 @@ gap: 15px;
     .project_title_content_wrapper {
         display: none;
     }
+
+    .left_wrapper {
+        width: 100%;
+        
+    }
+
+    .right_wrapper {
+        width: 100%;
+        gap: 10px;
+        
+    }
+    .tile_with_zoom {
+        gap: 15px;
+        position: fixed;
+        top: 20%;
+        left: 0%;
+        transform: translate(-50%, -50%);
+        z-index: 999;
+        background: rgb(240, 232, 232);
+        padding: 10px;
+        transition: all 0.3s ease;
+        background-color: white;
+    }
 }
