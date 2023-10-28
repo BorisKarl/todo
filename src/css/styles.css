@@ -166,3 +166,13 @@ gap: 15px;
     border: solid 1px;
     align-items: center;
 }
+
+
+@media only screen and (max-width: 600px) {
+
+    .flex_container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+}
