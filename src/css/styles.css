@@ -175,4 +175,7 @@ gap: 15px;
             flex-direction: column;
             gap: 10px;
         }
+    .project_title_content_wrapper {
+        display: none;
+    }
 }
