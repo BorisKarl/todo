@@ -7,3 +7,5 @@ The to-do's are objects as well. I used webpack for bundling the js modules and 
 Feel free to try it out. Storing data is handled by using the Storage object in your browser, so you are able to save your to-do's without expiration date;) 
 For more info on the Storage object check out the w3 docs https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
 The js modules are bundled with webpack.
+
+Live demo here: [just to-do it!](https://boriskarl.github.io/todo/dist/ "live demo")
