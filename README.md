@@ -5,7 +5,7 @@ this is a todo-list webapp.
 
 It uses:
 * Javascript (a lot)
-* Webpack https://de.wikipedia.org/wiki/Webpack#/media/Datei:Webpack.svg
+* Webpack ![alt text](https://de.wikipedia.org/wiki/Webpack#/media/Datei:Webpack.svg "webpack logo")
 * HTML
 * CSS
 * The local Storage Object. For more info on the Storage object check out the w3 docs https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
