@@ -8,7 +8,8 @@ It uses:
 * Webpack
 * HTML
 * CSS
-* The local Storage Object. For more info on the Storage object check out the w3 docs https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+* The local Storage Object. For more info on the Storage object check out the w3 docs
+  https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
 
 The projects that can be added are objects which store various to-do's in an array. 
 The to-do's are objects as well.
